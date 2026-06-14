@@ -41,7 +41,6 @@ header {
     align-items: center;
 }
 
-/* Logo Style d'après WhatsApp Image 2026-06-14 at 13.25.04.jpeg */
 .logo-area {
     display: flex;
     align-items: center;
@@ -252,7 +251,7 @@ nav ul a:hover {
     color: #000;
 }
 
-/* Grids Généraux (Programmes, Exercices, Tarifs) */
+/* Grids Généraux */
 .programs-grid, .exercises-grid, .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
