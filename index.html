@@ -8,8 +8,10 @@
 </head>
 <body>
 
+    <!-- Header / Nav -->
     <header>
         <div class="container header-content">
+            <!-- Blast l-logo lli f-tswira WhatsApp Image 2026-06-14 at 13.25.04.jpeg -->
             <div class="logo-area">
                 <div class="gold-box">G</div>
                 <div class="logo-text">
@@ -21,6 +23,7 @@
                 <ul>
                     <li><a href="#home">Accueil</a></li>
                     <li><a href="#activities">Activités</a></li>
+                    <li><a href="#planning">Planning</a></li>
                     <li><a href="#programs">Programmes</a></li>
                     <li><a href="#exercises">Exercices</a></li>
                     <li><a href="#pricing">Tarifs</a></li>
@@ -29,6 +32,7 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-overlay">
             <h2>FITNESS • MUSCULATION • PREMIUM</h2>
@@ -37,6 +41,7 @@
         </div>
     </section>
 
+    <!-- Section Activités -->
     <section id="activities" class="container section">
         <h2 class="section-title">Nos Activités</h2>
         <div class="activities-grid">
@@ -68,6 +73,83 @@
         </div>
     </section>
 
+    <!-- Section Planning & Horaires -->
+    <section id="planning" class="container section">
+        <h2 class="section-title">Planning & Horaires</h2>
+        
+        <div class="filter-buttons">
+            <button class="btn-plan-filter active" data-plan="all">Tout le Planning</button>
+            <button class="btn-plan-filter" data-plan="rjal">👨 Hommes (100%)</button>
+            <button class="btn-plan-filter" data-plan="3yalat">👩 Femmes (100%)</button>
+        </div>
+
+        <div class="table-container">
+            <table class="planning-table">
+                <thead>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Catégorie</th>
+                        <th>Horaires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Lundi -->
+                    <tr class="plan-row" data-gender="rjal">
+                        <td class="day-cell">Lundi (Tnin)</td>
+                        <td><span class="badge pro">👨 Hommes</span></td>
+                        <td>Toute la journée (Fermeture à 00:00)</td>
+                    </tr>
+                    <!-- Mardi -->
+                    <tr class="plan-row" data-gender="3yalat">
+                        <td class="day-cell">Mardi (Tlat)</td>
+                        <td><span class="badge debutant">👩 Femmes</span></td>
+                        <td>06:00 - 18:00 (Fin à 6h d l-3chia)</td>
+                    </tr>
+                    <tr class="plan-row" data-gender="rjal">
+                        <td class="day-cell">Mardi (Tlat)</td>
+                        <td><span class="badge pro">👨 Hommes</span></td>
+                        <td>18:00 - 00:00 (Entrée après 6h)</td>
+                    </tr>
+                    <!-- Mercredi -->
+                    <tr class="plan-row" data-gender="rjal">
+                        <td class="day-cell">Mercredi (Lrb3)</td>
+                        <td><span class="badge pro">👨 Hommes</span></td>
+                        <td>Toute la journée</td>
+                    </tr>
+                    <!-- Jeudi -->
+                    <tr class="plan-row" data-gender="3yalat">
+                        <td class="day-cell">Jeudi (Khmis)</td>
+                        <td><span class="badge debutant">👩 Femmes</span></td>
+                        <td>06:00 - 18:00 (Fin à 6h d l-3chia)</td>
+                    </tr>
+                    <tr class="plan-row" data-gender="rjal">
+                        <td class="day-cell">Jeudi (Khmis)</td>
+                        <td><span class="badge pro">👨 Hommes</span></td>
+                        <td>18:00 - 00:00 (Entrée après 6h)</td>
+                    </tr>
+                    <!-- Vendredi -->
+                    <tr class="plan-row" data-gender="rjal">
+                        <td class="day-cell">Vendredi (Jm3a)</td>
+                        <td><span class="badge pro">👨 Hommes</span></td>
+                        <td>Toute la journée</td>
+                    </tr>
+                    <!-- Samedi -->
+                    <tr class="plan-row" data-gender="3yalat">
+                        <td class="day-cell">Samedi (Sbt)</td>
+                        <td><span class="badge debutant">👩 Femmes</span></td>
+                        <td>06:00 - 18:00 (Fin à 6h d l-3chia)</td>
+                    </tr>
+                    <tr class="plan-row" data-gender="rjal">
+                        <td class="day-cell">Samedi (Sbt)</td>
+                        <td><span class="badge pro">👨 Hommes</span></td>
+                        <td>18:00 - 00:00 (Entrée après 6h)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section Programmes -->
     <section id="programs" class="container section">
         <h2 class="section-title">Nos Programmes</h2>
         <div class="programs-grid">
@@ -86,6 +168,7 @@
         </div>
     </section>
 
+    <!-- Section Exercices + JavaScript Filter -->
     <section id="exercises" class="container section">
         <h2 class="section-title">Guide des Exercices</h2>
         
@@ -100,33 +183,34 @@
                 <span class="badge debutant">Débutant</span>
                 <h3>Squat au Poids du Corps</h3>
                 <p><strong>Cible :</strong> Cuisses & Fessiers</p>
-                <p>Parfait pour apprendre le mouvement de base en toute sécurité avant de charger la barre.</p>
+                <p>Parfait pour apprendre le mouvement de base en toute sécurité.</p>
             </div>
             <div class="card exercise-card" data-level="debutant">
                 <span class="badge debutant">Débutant</span>
                 <h3>Développé Couché (Barre vide)</h3>
                 <p><strong>Cible :</strong> Pectoraux & Triceps</p>
-                <p>Idéal pour maîtriser la trajectoire du mouvement et stabiliser les épaules.</p>
+                <p>Idéal pour maîtriser la trajectoire du mouvement.</p>
             </div>
-
             <div class="card exercise-card" data-level="professionnel">
                 <span class="badge pro">Professionnel</span>
                 <h3>Soulevé de Terre (Deadlift)</h3>
                 <p><strong>Cible :</strong> Chaîne Postérieure</p>
-                <p>Exercice de force pure demandant une technique irréprochable et une grande stabilité.</p>
+                <p>Exercice de force pure demandant une technique irréprochable.</p>
             </div>
             <div class="card exercise-card" data-level="professionnel">
                 <span class="badge pro">Professionnel</span>
                 <h3>Développé Militaire Lourd</h3>
                 <p><strong>Cible :</strong> Épaules & Triceps</p>
-                <p>Mouvement de poussée verticale exigeant pour développer des épaules puissantes.</p>
+                <p>Mouvement de poussée verticale exigeant.</p>
             </div>
         </div>
     </section>
 
+    <!-- Section Tarifs & Abonnements -->
     <section id="pricing" class="container section">
         <h2 class="section-title">Nos Tarifs & Abonnements</h2>
         <div class="pricing-grid">
+            <!-- Tarif Étudiant -->
             <div class="card pricing-card student-card">
                 <span class="price-badge">Offre Spéciale</span>
                 <h3>Étudiants</h3>
@@ -136,6 +220,7 @@
                 <button class="btn-gold interaction-btn" data-type="Étudiant" data-price="500 DH" data-duration="3 Mois">Choisir sur WhatsApp</button>
             </div>
 
+            <!-- Tarif Mensuel Général -->
             <div class="card pricing-card featured">
                 <h3>Mensuel</h3>
                 <div class="price">350 DH</div>
@@ -144,6 +229,7 @@
                 <button class="btn-gold interaction-btn" data-type="Mensuel" data-price="350 DH" data-duration="1 Mois">Choisir sur WhatsApp</button>
             </div>
 
+            <!-- Tarif Adultes / Long terme -->
             <div class="card pricing-card">
                 <h3>Adultes (Long Terme)</h3>
                 <div class="price">1000 DH</div>
@@ -154,6 +240,7 @@
         </div>
     </section>
 
+    <!-- Footer m3a l-localisation -->
     <footer>
         <div class="container footer-content">
             <p>&copy; 2026 GOGYM DAR SALAM. Tous droits réservés.</p>
