@@ -6,13 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Activer le bouton cliqué
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
             const target = button.getAttribute('data-target');
 
-            // Filtrer les cartes
             exerciseCards.forEach(card => {
                 const level = card.getAttribute('data-level');
                 
@@ -29,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- PARTIE 2: Liaison Directe avec WhatsApp ---
     const pricingButtons = document.querySelectorAll('.interaction-btn');
-    const whatsappNumber = "212678918938"; // Numéro de téléphone cible
+    const whatsappNumber = "212678918938"; // Numéro WhatsApp dyl l-sal
 
     pricingButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -37,21 +35,41 @@ document.addEventListener('DOMContentLoaded', () => {
             const planPrice = button.getAttribute('data-price');
             const planDuration = button.getAttribute('data-duration');
 
-            // Formater le message envoyé sur WhatsApp
             const baseMessage = `Bonjour GOGYM DAR SALAM, je suis intéressé par l'offre suivante :\n\n` +
                                 `🏋️‍♂️ Pack : ${planName}\n` +
                                 `💰 Prix : ${planPrice}\n` +
                                 `📅 Durée : ${planDuration}\n\n` +
                                 `Je souhaite avoir plus d'informations pour finaliser mon inscription. Merci !`;
 
-            // Encoder le texte pour l'URL
             const encodedMessage = encodeURIComponent(baseMessage);
-
-            // Lien WhatsApp Universel (PC et Mobile)
             const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
 
-            // Ouvrir dans un nouvel onglet
             window.open(whatsappUrl, '_blank');
+        });
+    });
+
+    // --- PARTIE 3: Filtrage Dynamique du Planning (H/F) ---
+    const planButtons = document.querySelectorAll('.btn-plan-filter');
+    const planRows = document.querySelectorAll('.plan-row');
+
+    planButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            planButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const targetPlan = button.getAttribute('data-plan');
+
+            planRows.forEach(row => {
+                const gender = row.getAttribute('data-gender');
+                
+                if (targetPlan === 'all' || gender === targetPlan) {
+                    row.style.display = 'table-row';
+                    row.style.opacity = '0';
+                    setTimeout(() => { row.style.opacity = '1'; }, 50);
+                } else {
+                    row.style.display = 'none';
+                }
+            });
         });
     });
 });
